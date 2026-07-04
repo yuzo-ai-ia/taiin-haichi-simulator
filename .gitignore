@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+streamlit_log.txt
+
+# 実データ（従業員名などが含まれるため管理対象外）
+*.csv
+
+# サンプルCSVはダミーデータのみのため公開対象に含める
+!sample_*.csv
