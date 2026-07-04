@@ -1,12 +1,12 @@
 # app.py
-# テント部品製造ツール Streamlit版
+# 部品ツール Streamlit版
 
 import streamlit as st
 import pandas as pd
 from calc_core import calc_process_times, count_processes, PROCESSES
 
-st.set_page_config(page_title="テント部品製造ツール", layout="wide")
-st.title("テント部品製造ツール")
+st.set_page_config(page_title="部品ツール", layout="wide")
+st.title("部品ツール")
 
 SAMPLE_MASTER = "sample_部品マスタ.csv"
 SAMPLE_ORDER  = "sample_生産指示.csv"

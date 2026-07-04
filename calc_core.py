@@ -1,5 +1,5 @@
 # calc_core.py
-# テント部品製造ツール 共通計算モジュール
+# 部品ツール 共通計算モジュール
 # app.py から import して使う。このファイル単体では実行しない。
 
 import pandas as pd
