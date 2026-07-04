@@ -38,6 +38,20 @@ def load_csv_safe(source, label, dtype=None):
     return df
 
 
+# ── サンプルCSVダウンロード ────────────────────────────────────────
+st.subheader("サンプルCSVをダウンロード")
+st.caption("列名や形式を確認したいときは、こちらのサンプルをダウンロードして参考にしてください。")
+
+dl_cols = st.columns(3)
+sample_downloads = [
+    ("部品マスタ.csv", SAMPLE_MASTER),
+    ("生産指示.csv",   SAMPLE_ORDER),
+    ("人員.csv",       SAMPLE_STAFF),
+]
+for col, (label, path) in zip(dl_cols, sample_downloads):
+    with open(path, "rb") as f:
+        col.download_button(f"⬇ {label}", f, file_name=label, mime="text/csv")
+
 # ── CSVアップロード ────────────────────────────────────────────────
 st.header("CSVファイルをアップロード")
 st.caption("アップロードが無い項目は、動作確認用のサンプルデータで表示されます。")
